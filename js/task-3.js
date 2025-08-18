@@ -11,6 +11,11 @@ Eğer dizede yasaklı kelimeler bulunmuyorsa, fonksiyon false değerini döndür
 Aşağıdaki kodu al ve fonksiyonun doğru çalışıp çalışmadığını kontrol etmek için kendi fonksiyonunun bildiriminden sonra yapıştır. Konsola işleyiş sonuçları yazdırılacaktır.
 */
 
+function checkForSpam(message) {
+  const lowerCaseMessage = message.toLowerCase();
+  return lowerCaseMessage.includes("spam") || lowerCaseMessage.includes("sale");
+}
+
 console.log(checkForSpam("Latest technology news")); // false
 console.log(checkForSpam("JavaScript weekly newsletter")); // false
 console.log(checkForSpam("Get best sale offers now!")); // true
